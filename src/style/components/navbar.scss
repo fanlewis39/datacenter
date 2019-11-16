@@ -1,0 +1,68 @@
+.navbar {
+  $color: #fafafa;
+  $open-color: #fcc;
+
+  position: relative;
+  background: #33adff url(../assets/bubble.png);
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    padding: 0 4px;
+    list-style: none;
+  }
+
+  &-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    color: $color;
+    text-align: center;
+
+    &:hover {
+      color: $open-color;
+    }
+  }
+
+  &-item {
+    position: relative;
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    color: $color;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
+
+    &.open {
+      color: $open-color;
+
+      .navbar-link {
+        color: $open-color;
+      }
+    }
+  }
+
+  &-divider {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    height: 20px;
+    border-left: 1px solid #e8eaec;
+  }
+
+  &-mark {
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+    height: 3px;
+    background-color: $open-color;
+    transition: {
+      property: left, width;
+      duration: 300ms;
+    }
+  }
+}

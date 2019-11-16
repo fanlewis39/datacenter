@@ -1,0 +1,17 @@
+{
+  "src/**/*.js": [
+    "prettier-eslint --write",
+    "git add"
+  ],
+  "src/**/*.scss": [
+    "npm run lint:style",
+    "prettier --write",
+    "git add"
+  ],
+  "src/**/*.vue": [
+    "npm run lint:style",
+    "prettier-eslint --write",
+    "npm run lint",
+    "git add"
+  ]
+}

@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background-color: #f8f8f9;
+}
+
+main {
+  padding: 12px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to .fade-leave-active {
+  opacity: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.title {
+  margin-bottom: 1em;
+  font-size: 1.8em;
+
+  &.left {
+    text-align: left;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: center;
+  }
+}
+
+.text {
+  &.small {
+    font-size: 0.8em;
+  }
+
+  &.large {
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+
+  &.left {
+    text-align: left;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: center;
+  }
+}
+
+.echarts {
+  width: 100%;
+  height: 100%;
+}
+
+.ivu-col {
+  padding: {
+    right: 12px;
+    left: 12px;
+  }
+}

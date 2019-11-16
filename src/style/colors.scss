@@ -1,0 +1,30 @@
+$colors: (
+  blue: $blue,
+  green: $green,
+  red: $red,
+  orange: $orange,
+  gray: $gray,
+  black: $black,
+  yellow: $yellow,
+  cyan: $cyan
+);
+
+@function get-color($name) {
+  $names: map-keys(
+    $map: $colors
+  );
+
+  @if not index($list: $names, $value: $name) {
+    @error 'Error: #{$name} is not a valid color name.';
+  }
+
+  @return map-get($map: $colors, $key: $name);
+}
+
+@each $name in map-keys($map: $colors) {
+  $color: get-color($name);
+
+  .#{'' + $name} {
+    background: $color;
+  }
+}

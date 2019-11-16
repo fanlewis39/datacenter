@@ -1,0 +1,21 @@
+.data-card {
+  display: flex;
+  justify-content: center;
+  padding: {
+    top: 30px;
+    bottom: 10px;
+  }
+
+  @at-root &__title {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 18px;
+  }
+
+  @at-root &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
